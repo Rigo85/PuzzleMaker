@@ -19,8 +19,7 @@
 
 namespace fs = std::experimental::filesystem;
 
-std::optional<output_pair>
-PuzzleMaker::getPuzzle(const std::string &fileName, const std::vector<std::pair<uint, uint>> &distribution, const uint &side) {
+std::optional <output_pair> PuzzleMaker::getPuzzle(const std::string &fileName, const pairs &distribution, const uint &side) {
     cv::Mat inputImage = cv::imread(fileName);
 
     if (inputImage.empty()) {
@@ -40,7 +39,7 @@ PuzzleMaker::getPuzzle(const std::string &fileName, const std::vector<std::pair<
     std::random_device rd;
     std::mt19937 g(rd());
 
-    std::vector<std::pair<uint, uint>> _distribution = distribution;
+    pairs _distribution = distribution;
     if (_distribution.empty()) {
         for (auto i = 0u; i < imageWidth / roiWidth; ++i) {
             for (auto j = 0u; j < imageHeight / roiHeight; ++j) {

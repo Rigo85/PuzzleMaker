@@ -17,10 +17,10 @@
 #include <vector>
 #include <optional>
 
-using output_pair = std::pair<std::string, std::vector<std::pair<uint, uint>>>;
+using output_pair = std::pair <std::string, std::vector<std::pair < uint, uint>>>;
+using pairs = std::vector <std::pair<uint, uint>>;
 
 class PuzzleMaker {
 public:
-    static std::optional<output_pair>
-    getPuzzle(const std::string &fileName = "", const std::vector<std::pair<uint, uint>> &distribution = {}, const uint &side = 5u);
+    static std::optional <output_pair> getPuzzle(const std::string &fileName = "", const pairs &distribution = {}, const uint &side = 5u);
 };
