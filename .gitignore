@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+.idea/
+build/CMakeCache.txt
+build/CMakeFiles/
+build/Makefile
+build/cmake_install.cmake
+build/puzzlemaker/
+build/test/CMakeFiles/
+build/test/Makefile
+build/test/cmake_install.cmake
+build/test/testPuzzle
+cmake-build-debug/
+puzzlemaker/cmake-build-debug/
